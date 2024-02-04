@@ -108,11 +108,11 @@ FROM Audios A
 GROUP BY A.Artist
 ORDER BY Total_Likes DESC
 
--- Top 5 Singles 
+-- Top 5 Artists with maximum singles 
 
+SELECT TOP 5 A.Artist, COUNT(A.Artist) AS Total_Singles
+FROM Audios A
+WHERE A.Album_type = 'single'
+GROUP BY A.Artist
+ORDER BY Total_Singles DESC
 
-
-
-SELECT TOP 5 * FROM Audios
-
---
